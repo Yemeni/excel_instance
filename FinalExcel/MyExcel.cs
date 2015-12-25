@@ -45,6 +45,13 @@ namespace MyExcelApp
             }
             return ExcelList;
         }
+        public static void DeleteFromExcel(int index) {
+            //MySheet.Rows[index].Delete();
+            //((Excel.Range)MySheet.Rows[index]).Delete(Excel.XlDeleteShiftDirection.xlShiftUp);
+            ExcelList.RemoveAt(index);
+            MyBook.Save();
+        }
+
         public static void WriteToExcel(ExcelRecord rec)
         {
             try

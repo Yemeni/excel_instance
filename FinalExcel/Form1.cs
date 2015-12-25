@@ -121,6 +121,15 @@ namespace MyExcelApp
             ExcelDialog.Title = "Select your team excel";
             if (ExcelDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+
+                // add check box
+                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                dataGridExcelList.Columns.Add(chk);
+                chk.HeaderText = "Check Data";
+                chk.Name = "chk";
+
+                // end add check box
+
                 MyExcel.DB_PATH = ExcelDialog.FileName;
                 txtFileName.Text = ExcelDialog.FileName;
                 txtFileName.ReadOnly = true;
@@ -131,13 +140,7 @@ namespace MyExcelApp
                 dataGridExcelList.DataSource = MyExcel.ReadMyExcel();
                 tblLytAddMem.Visible = true;
 
-                // add check box
-                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
-                dataGridExcelList.Columns.Add(chk);
-                chk.HeaderText = "Check Data";
-                chk.Name = "chk";
                 
-                // end add check box
 
                 tabControl1.SelectedTab = tabPage2;
 
@@ -156,8 +159,30 @@ namespace MyExcelApp
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            //dataGridExcelList.Rows[2].Cells[10].Value = true;
+            //dataGridExcelList.Rows[1].Cells[0].Value;
+            //MessageBox.Show(Convert.ToString(dataGridExcelList.Rows[2].Cells[0].Value));
             //bool a = Convert.ToBoolean(dataGridExcelList.Rows[1].Cells[10].Value);
+
+            restart:
+            //MyExcel.DeleteFromExcel(1);
+            foreach (DataGridViewRow row in dataGridExcelList.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[0].Value)) {
+                    Console.WriteLine(row.Index);
+                    int r = row.Index;
+                    MyExcel.DeleteFromExcel(r);
+                    
+                    //dataGridExcelList.Rows.RemoveAt(r);
+                    //MyExcel.DeleteFromExcel(r);
+                    
+
+                    goto restart;
+                }
+                //int[] test = { 1, 3, 4 };
+                //MyExcel.DeleteFromExcel(test);
+            }
+            
+
         }
 
         private void buttonImport_Click(object sender, EventArgs e)
