@@ -15,3 +15,8 @@ C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalE
 C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyExcelProject.csproj.ResolveComReference.cache
 C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyTeamApp.exe
 C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyTeamApp.pdb
+C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\bin\Debug\MyTeamApp.exe
+C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\bin\Debug\MyTeamApp.pdb
+C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyExcelApp.Form1.resources
+C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyExcelApp.Properties.Resources.resources
+C:\Users\Hello Yemen\Documents\Visual Studio 2010\Projects\excel_instance\FinalExcel\obj\Debug\MyExcelProject.csproj.GenerateResource.Cache

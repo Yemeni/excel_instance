@@ -166,26 +166,14 @@ namespace MyExcelApp
             tabControl1.SelectedTab = tabPage2;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void textCrimedescr_TextChanged(object sender, EventArgs e)
         {
-            ExcelRecord rec = new ExcelRecord
-            {
-                cdatetime = textCDateTime.Text.ToString(),
-                address = textAddress.Text.ToString(),
-                district = textDistrict.Text.ToString(),
-                beat = textBeat.Text.ToString(),
-                grid = textGrid.Text.ToString(),
-                crimedescr = textCrimedescr.Text.ToString(),
-                ucr_ncic_code = textUcr_ncic_code.Text.ToString(),
-                latitude = textLatitude.Text.ToString(),
-                longitude = textLongitude.Text.ToString()
-            };
-            MyExcel.WriteToExcel(rec);
-            clearAllFields();
-            MessageBox.Show("Details were successfully added to the excel !!", "Success..", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            textCDateTime.Focus();
 
-            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

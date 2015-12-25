@@ -68,7 +68,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\EmpConstants1.datasource" />
     <None Include="Properties\DataSources\ExcelRecord.datasource" />
     <None Include="Properties\DataSources\Form11.datasource" />
     <None Include="Properties\DataSources\Microsoft.Office.Core.Adjustments.datasource" />
