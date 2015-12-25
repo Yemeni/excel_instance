@@ -45,11 +45,6 @@
             this.cmbSearch = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttonImport = new System.Windows.Forms.Button();
-            this.buttonExport = new System.Windows.Forms.Button();
-            this.buttonHelp = new System.Windows.Forms.Button();
-            this.buttonFile = new System.Windows.Forms.Button();
-            this.recConstantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblLytAddMem = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -73,17 +68,22 @@
             this.textDistrict = new System.Windows.Forms.TextBox();
             this.textAddress = new System.Windows.Forms.TextBox();
             this.textCDateTime = new System.Windows.Forms.TextBox();
+            this.buttonImport = new System.Windows.Forms.Button();
+            this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonFile = new System.Windows.Forms.Button();
+            this.recConstantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1.SuspendLayout();
             this.pnlFileHeader.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExcelList)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recConstantsBindingSource)).BeginInit();
             this.tblLytAddMem.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recConstantsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -269,47 +269,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "add new";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // buttonImport
-            // 
-            this.buttonImport.Location = new System.Drawing.Point(95, 12);
-            this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(75, 23);
-            this.buttonImport.TabIndex = 1;
-            this.buttonImport.Text = "Import";
-            this.buttonImport.UseVisualStyleBackColor = true;
-            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
-            // 
-            // buttonExport
-            // 
-            this.buttonExport.Location = new System.Drawing.Point(176, 12);
-            this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(75, 23);
-            this.buttonExport.TabIndex = 2;
-            this.buttonExport.Text = "export";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            // 
-            // buttonHelp
-            // 
-            this.buttonHelp.Location = new System.Drawing.Point(257, 12);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
-            this.buttonHelp.TabIndex = 3;
-            this.buttonHelp.Text = "Help";
-            this.buttonHelp.UseVisualStyleBackColor = true;
-            // 
-            // buttonFile
-            // 
-            this.buttonFile.Location = new System.Drawing.Point(14, 12);
-            this.buttonFile.Name = "buttonFile";
-            this.buttonFile.Size = new System.Drawing.Size(75, 23);
-            this.buttonFile.TabIndex = 4;
-            this.buttonFile.Text = "File";
-            this.buttonFile.UseVisualStyleBackColor = true;
-            // 
-            // recConstantsBindingSource
-            // 
-            this.recConstantsBindingSource.DataSource = typeof(MyExcelApp.RecConstants);
             // 
             // tblLytAddMem
             // 
@@ -522,6 +481,48 @@
             this.textCDateTime.Size = new System.Drawing.Size(261, 20);
             this.textCDateTime.TabIndex = 0;
             // 
+            // buttonImport
+            // 
+            this.buttonImport.Location = new System.Drawing.Point(95, 12);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(75, 23);
+            this.buttonImport.TabIndex = 1;
+            this.buttonImport.Text = "Import";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(176, 12);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(75, 23);
+            this.buttonExport.TabIndex = 2;
+            this.buttonExport.Text = "export";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Location = new System.Drawing.Point(257, 12);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonHelp.TabIndex = 3;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
+            // buttonFile
+            // 
+            this.buttonFile.Location = new System.Drawing.Point(14, 12);
+            this.buttonFile.Name = "buttonFile";
+            this.buttonFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonFile.TabIndex = 4;
+            this.buttonFile.Text = "File";
+            this.buttonFile.UseVisualStyleBackColor = true;
+            // 
+            // recConstantsBindingSource
+            // 
+            this.recConstantsBindingSource.DataSource = typeof(MyExcelApp.RecConstants);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,6 +535,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "A CSCI385 Visual Programming with C# Excel Instance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage1.ResumeLayout(false);
             this.pnlFileHeader.ResumeLayout(false);
@@ -543,13 +545,13 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExcelList)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.recConstantsBindingSource)).EndInit();
             this.tblLytAddMem.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recConstantsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -22,6 +22,5 @@ namespace MyExcelApp
 
     class RecConstants
     {
-        private const string DOMAIN_NAME = "xyz.com";
     }
 }

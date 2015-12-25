@@ -30,7 +30,7 @@ namespace MyExcelApp
 
             if (string.IsNullOrEmpty(MyExcel.DB_PATH))
             {
-                MessageBox.Show(" Please provide the team excel file ..", "Error !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" Please provide excel file ..", "Error !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 args.Cancel = true;
             }
         }
@@ -63,6 +63,8 @@ namespace MyExcelApp
             clearAllFields();
             MessageBox.Show("Details were successfully added to the excel !!", "Success..", MessageBoxButtons.OK, MessageBoxIcon.Information);
             textCDateTime.Focus();
+
+            tabControl1.SelectedTab = tabPage2 ;
         }
 
         public void clearAllFields()
@@ -137,6 +139,8 @@ namespace MyExcelApp
                 
                 // end add check box
 
+                tabControl1.SelectedTab = tabPage2;
+
             }
         }
 
@@ -174,6 +178,17 @@ namespace MyExcelApp
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MyExcel.DB_PATH))
+                MyExcel.CloseExcel();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Yemeni/excel_instance/issues");
         }
 
     }
