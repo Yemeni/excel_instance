@@ -64,9 +64,8 @@ namespace MyExcelApp
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
             //xlWorkSheet = MySheet;
-            xlWorkSheet = MyApp.Workbooks[0].Sheets[0];
-
-            //xlWorkSheet.Cells[1, 1] = "faaak";
+            //xlWorkSheet = MyApp.Workbooks[0].Sheets[0];
+            xlWorkSheet.Cells[1, 1] = "EXPORTED";
             xlWorkBook.SaveAs("ExportExcel.xlsx");
             xlWorkBook.Close(true, misValue, misValue);
             xlApp.Quit();

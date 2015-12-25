@@ -140,11 +140,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 10);
+            this.label13.Location = new System.Drawing.Point(3, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 17);
+            this.label13.Size = new System.Drawing.Size(182, 17);
             this.label13.TabIndex = 0;
-            this.label13.Text = "Provide XLSX file ";
+            this.label13.Text = "Provide Excel XLSX file ";
             // 
             // tabControl1
             // 
