@@ -162,7 +162,7 @@ namespace MyExcelApp
             //dataGridExcelList.Rows[1].Cells[0].Value;
             //MessageBox.Show(Convert.ToString(dataGridExcelList.Rows[2].Cells[0].Value));
             //bool a = Convert.ToBoolean(dataGridExcelList.Rows[1].Cells[10].Value);
-
+            
             restart:
             //MyExcel.DeleteFromExcel(1);
             foreach (DataGridViewRow row in dataGridExcelList.Rows)
@@ -181,6 +181,7 @@ namespace MyExcelApp
                 //int[] test = { 1, 3, 4 };
                 //MyExcel.DeleteFromExcel(test);
             }
+
             
 
         }

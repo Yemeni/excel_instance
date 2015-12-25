@@ -48,7 +48,14 @@ namespace MyExcelApp
         public static void DeleteFromExcel(int index) {
             //MySheet.Rows[index].Delete();
             //((Excel.Range)MySheet.Rows[index]).Delete(Excel.XlDeleteShiftDirection.xlShiftUp);
-            ExcelList.RemoveAt(index);
+            //ExcelList.RemoveAt(index);
+            //Microsoft.Office.Interop.Excel.Range cel = (Excel.Range)MySheet.Cells[index];
+            index++;
+            String d = Convert.ToString(index);
+            Excel.Range range = MySheet.get_Range("A"+d, "A"+d.ToString());
+            range.EntireRow.Delete(Excel.XlDirection.xlUp);
+            //cel.Delete();
+
             MyBook.Save();
         }
 
