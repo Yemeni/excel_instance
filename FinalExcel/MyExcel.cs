@@ -45,12 +45,44 @@ namespace MyExcelApp
             }
             return ExcelList;
         }
+        public static void ExportExcel() {
+
+            //Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            //Excel.Workbook xlBook = xlApp.Workbooks.Open(@"");
+            //Excel.Worksheet xlSheet = xlBook.Sheets[1];
+
+            //xlSheet = MySheet;
+            //xlBook.SaveAs("exp.xlsx");
+            //xlApp.Quit();
+
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            //xlWorkSheet = MySheet;
+            xlWorkSheet = MyApp.Workbooks[0].Sheets[0];
+
+            //xlWorkSheet.Cells[1, 1] = "faaak";
+            xlWorkBook.SaveAs("ExportExcel.xlsx");
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            //releaseObject(xlWorkSheet);
+            //releaseObject(xlWorkBook);
+            //releaseObject(xlApp);
+
+        }
+
         public static void DeleteFromExcel(int index) {
             //MySheet.Rows[index].Delete();
             //((Excel.Range)MySheet.Rows[index]).Delete(Excel.XlDeleteShiftDirection.xlShiftUp);
             //ExcelList.RemoveAt(index);
             //Microsoft.Office.Interop.Excel.Range cel = (Excel.Range)MySheet.Cells[index];
-            index++;
+            index += 2;
             String d = Convert.ToString(index);
             Excel.Range range = MySheet.get_Range("A"+d, "A"+d.ToString());
             range.EntireRow.Delete(Excel.XlDirection.xlUp);

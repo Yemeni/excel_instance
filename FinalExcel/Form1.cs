@@ -170,9 +170,8 @@ namespace MyExcelApp
                 if (Convert.ToBoolean(row.Cells[0].Value)) {
                     Console.WriteLine(row.Index);
                     int r = row.Index;
-                    MyExcel.DeleteFromExcel(r);
-                    
-                    //dataGridExcelList.Rows.RemoveAt(r);
+                    dataGridExcelList.Rows.RemoveAt(r);
+                    MyExcel.DeleteFromExcel(r);    
                     //MyExcel.DeleteFromExcel(r);
                     
 
@@ -215,6 +214,11 @@ namespace MyExcelApp
         private void buttonHelp_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Yemeni/excel_instance/issues");
+        }
+
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            MyExcel.ExportExcel();
         }
 
     }
